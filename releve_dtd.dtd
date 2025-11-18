@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT releve (dateReleve,solde,operations+)>
+<!ELEMENT dateReleve EMPTY >
+<!ELEMENT solde EMPTY >
+<!ELEMENT operations (operation+) >
+<!ELEMENT operation EMPTY >
+
+<!ATTLIST releve 
+            RIB CDATA #REQUIRED
+            dateReleve CDATA #REQUIRED
+            solde CDATA #REQUIRED>
+<!ATTLIST operations
+           dateDebut CDATA #REQUIRED
+           dateFin CDATA #REQUIRED>
+<!ATTLIST operation 
+            type CDATA #REQUIRED
+            date CDATA #REQUIRED
+            montant CDATA #REQUIRED
+            description CDATA #REQUIRED>
